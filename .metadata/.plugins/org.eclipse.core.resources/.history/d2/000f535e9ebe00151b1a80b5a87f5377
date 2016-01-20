@@ -1,0 +1,55 @@
+package com.psl.client;
+
+import com.psl.bean.Category;
+import com.psl.bean.Customer;
+import com.psl.bean.CustomerStatus;
+import com.psl.bean.Login;
+import com.psl.bean.Product;
+import com.psl.dao.CategoryDaoImpl;
+import com.psl.dao.CustomerDaoImpl;
+import com.psl.dao.LoginDaoImpl;
+import com.psl.dao.ProductDaoImpl;
+
+public class Client {
+
+public static void main(String[] args) {
+	Category cat = new Category();
+	//cat.setCategoryId(1);
+	cat.setCategoryName("Mobile");
+
+	CategoryDaoImpl dao = new CategoryDaoImpl();
+	dao.insertCategory(cat);
+	System.out.println("Record inserted");
+	
+	Customer cust = new Customer();
+	//cust.setCustomerId(1);
+	cust.setFirstName("Ajay");
+	cust.setLastName("Sinha");
+	cust.setContactNo("9767688842");
+	cust.setEmail("oajay.sinha@gmail.com");
+	cust.setStatus(CustomerStatus.ACTIVE);
+	
+	CustomerDaoImpl daocust = new CustomerDaoImpl();
+	daocust.insertCustomer(cust);
+	System.out.println("customer inserted");
+	
+	
+	Login login = new Login();
+	login.setUsername("ajaysinha");
+	login.setPassword("ajaysinha");
+	login.setCustomer(cust);
+	LoginDaoImpl daologin = new LoginDaoImpl();
+	daologin.insertLogin(login);
+	System.out.println("Login inserted");
+	
+	
+	Product product = new Product();
+	product.setProductName("Sony Xperia M2 Dual");
+	product.setProductPrice(21005.00);
+	product.setCategory(cat);
+	
+	ProductDaoImpl daoprod = new ProductDaoImpl();
+	daoprod.insertProduct(product);
+	System.out.println("Product Inserted");
+}
+}

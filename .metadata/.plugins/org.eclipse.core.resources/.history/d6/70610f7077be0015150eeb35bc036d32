@@ -1,0 +1,21 @@
+package com.psl.utility;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class HibernateUtility {
+
+	static SessionFactory sf = null;
+	
+	public static SessionFactory getSessionfactory(){
+	
+		if(sf==null){
+		
+			Configuration cfg = new Configuration();//to tell about which db which is in configurations
+			cfg.configure();//it will serach for hibernate.cfg.xml...if any other file, then specify it
+			sf = cfg.buildSessionFactory(); //so than it knows for which db
+		}
+	return sf;
+}
+}
+

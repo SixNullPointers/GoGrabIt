@@ -1,0 +1,22 @@
+package com.psl.dao;
+
+import com.psl.bean.RequestDetails;
+
+public class RequestDaoImpl implements RequestDao {
+
+	public void insertRequest(RequestDetails req) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public RequestDetails getRequest(int requestId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void deleteRequest(RequestDetails req) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,63 @@
+package com.psl.dao;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import com.psl.bean.Category;
+import com.psl.utility.HibernateUtility;
+
+public class CategoryDaoImpl implements CategoryDao{
+
+	
+	@Override
+	public void deleteEmployee(Employee emp) {
+		
+	}
+
+	public void insertCategory(Category cat) {
+		SessionFactory sf = HibernateUtility.getSessionfactory();
+		
+		Session session =sf.openSession(); //session factory will give sessions
+		
+		session.beginTransaction();//once you have session you save it..therefore for any dml operaion in hib you need to create a transaction
+		
+		
+		session.save(cat);//save what? in ()
+		
+		
+		session.getTransaction().commit();
+	}
+
+	public Category getCategory(int catId) {
+		// TODO Auto-generated method stub
+		SessionFactory sf = HibernateUtility.getSessionfactory();
+
+		Session session =sf.openSession(); //session factory will give sessions
+		Category c = (Category)session.get(Category.class,catId);
+		
+		return c;
+	}
+
+	public void updateCategory(Category cat) {
+		// TODO Auto-generated method stub
+		SessionFactory sf = HibernateUtility.getSessionfactory();
+		
+		Session session =sf.openSession(); 
+		session.beginTransaction();
+		session.update(cat);
+		session.getTransaction().commit();
+	}
+
+	public void deleteCategory(Category cat) {
+		// TODO Auto-generated method stub
+				SessionFactory sf = HibernateUtility.getSessionfactory();
+				
+				Session session =sf.openSession();
+				
+				session.beginTransaction();
+				session.delete(cat);
+				session.getTransaction().commit();
+		
+	}
+
+}

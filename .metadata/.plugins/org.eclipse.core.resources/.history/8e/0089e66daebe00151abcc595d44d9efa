@@ -1,0 +1,27 @@
+package com.psl.dao;
+
+import com.psl.bean.QueryReplyDetails;
+
+public class QueryReplyDaoImpl implements QueryReplyDao{
+
+	public void insertQueryReply(QueryReplyDetails reply) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public QueryReplyDetails getQueryReply(int replyId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void updateCustomer(QueryReplyDetails reply) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void deleteCustomer(QueryReplyDetails reply) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

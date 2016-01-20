@@ -1,0 +1,27 @@
+package com.psl.dao;
+
+import com.psl.bean.Customer;
+
+public class CustomerDaoImpl implements CustomerDao {
+
+	public void insertCustomer(Customer cust) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public Customer getCustomer(int custId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void updateCustomer(Customer cust) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void deleteCustomer(Customer cust) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

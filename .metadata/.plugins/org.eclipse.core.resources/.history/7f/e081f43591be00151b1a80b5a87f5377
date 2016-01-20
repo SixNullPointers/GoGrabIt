@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ 
+<class name="com.psl.bean.Category" >
+<id name="categoryId"  type="integer" >
+<generator class="increment"></generator>
+</id>
+<property name="categoryName" type="string" />
+</class>
+ 
+ 
+ <class name="com.psl.bean.Customer" >
+<id name="customerId"  type="integer" >
+<generator class="increment"></generator>
+</id>
+<property name="firstName" type="string" />
+<property name="lastName" type="string" />
+<property name="email" type="string" />
+<property name="contactNo" type="string" />
+<!-- <property name="status" type="string" />
+ -->
+<property name="status" >
+    <type name="org.hibernate.type.EnumType">
+        <param name="enumClass">com.psl.bean.CustomerStatus</param>
+        <param name="useNamed">true</param>
+    </type>
+</property>
+</class>
+</hibernate-mapping>

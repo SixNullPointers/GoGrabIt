@@ -1,0 +1,63 @@
+package com.psl.bean;
+
+import java.util.Date;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+
+@Entity
+
+
+public class ReviewReplyDetails {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int replyId;
+	private String replyMessage;
+	private Date replyDate;	
+	@OneToOne( cascade={CascadeType.ALL})
+	private Review review;
+	@OneToOne( cascade={CascadeType.ALL})
+	private Customer customer;
+	
+
+		
+		
+		
+		
+	
+	
+	public ReviewReplyDetails() {
+	}
+	public String getrReplyId() {
+		return rReplyId;
+	}
+	public void setrReplyId(String rReplyId) {
+		this.rReplyId = rReplyId;
+	}
+	public String getrReviewId() {
+		return rReviewId;
+	}
+	public void setrReviewId(String rReviewId) {
+		this.rReviewId = rReviewId;
+	}
+	public String getrReplyMessage() {
+		return rReplyMessage;
+	}
+	public void setrReplyMessage(String rReplyMessage) {
+		this.rReplyMessage = rReplyMessage;
+	}
+	public Date getrReviewDate() {
+		return rReviewDate;
+	}
+	public void setrReviewDate(Date rReviewDate) {
+		this.rReviewDate = rReviewDate;
+	}
+	
+}

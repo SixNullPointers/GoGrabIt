@@ -1,0 +1,9 @@
+package com.psl.client;
+
+import org.hibernate.SessionFactory;
+
+public class Client {
+private static SessionFactory;
+
+
+}

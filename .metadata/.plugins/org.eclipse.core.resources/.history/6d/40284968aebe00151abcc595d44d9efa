@@ -1,0 +1,5 @@
+package com.psl.dao;
+
+public class QueryReplyDaoImpl {
+
+}

@@ -1,0 +1,100 @@
+package com.psl.bean;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+
+@Entity
+
+public class RequestDetails {
+	@Id
+	@GeneratedValue
+	private int requestId;
+	@Enumerated(EnumType.STRING)
+	private RequestStatus status;
+	@OneToOne( cascade={CascadeType.ALL})
+	private Customer customer;
+	@OneToOne( cascade={CascadeType.ALL})
+	private Product product;
+	
+	
+	
+	
+	
+	public RequestDetails()
+	{
+		
+	}
+
+
+
+
+
+	public int getRequestId() {
+		return requestId;
+	}
+
+
+
+
+
+	public void setRequestId(int requestId) {
+		this.requestId = requestId;
+	}
+
+
+
+
+
+	public RequestStatus getStatus() {
+		return status;
+	}
+
+
+
+
+
+	public void setStatus(RequestStatus status) {
+		this.status = status;
+	}
+
+
+
+
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+
+
+
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+
+
+
+
+
+	public Product getProduct() {
+		return product;
+	}
+
+
+
+
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+	
+	
+
+	
+	
+}

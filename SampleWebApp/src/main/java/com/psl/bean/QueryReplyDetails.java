@@ -1,0 +1,60 @@
+package com.psl.bean;
+
+import java.util.Date;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+
+@Entity
+
+public class QueryReplyDetails {
+
+	 @Id @GeneratedValue(strategy=GenerationType.AUTO)
+	private int replyId;
+	private String replyMessage;
+	private Date replyDate;
+	@ManyToOne( cascade={CascadeType.ALL})
+	private Query query;
+	@OneToOne( cascade={CascadeType.ALL})
+	private Customer customer;
+	public QueryReplyDetails() {
+		
+	}
+	public int getReplyId() {
+		return replyId;
+	}
+	public void setReplyId(int replyId) {
+		this.replyId = replyId;
+	}
+	public String getReplyMessage() {
+		return replyMessage;
+	}
+	public void setReplyMessage(String replyMessage) {
+		this.replyMessage = replyMessage;
+	}
+	public Date getReplyDate() {
+		return replyDate;
+	}
+	public void setReplyDate(Date replyDate) {
+		this.replyDate = replyDate;
+	}
+	public Query getQuery() {
+		return query;
+	}
+	public void setQuery(Query query) {
+		this.query = query;
+	}
+	public Customer getCustomer() {
+		return customer;
+	}
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+	
+	
+}

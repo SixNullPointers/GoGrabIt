@@ -1,0 +1,17 @@
+package com.psl.client;
+
+import com.psl.bean.Category;
+import com.psl.dao.CategoryDaoImpl;
+
+public class Client {
+
+public static void main(String[] args) {
+	Category cat = new Category();
+	cat.setCategoryId("1");
+	cat.setCategoryName("Electronics");
+
+	CategoryDaoImpl dao = new CategoryDaoImpl();
+	dao.insertCategory(cat);
+	System.out.println("Record inserted");
+}
+}

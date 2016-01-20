@@ -1,0 +1,12 @@
+package com.psl.client;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class Client {
+private static SessionFactory sessionFactory;
+
+public static void main(String[] args) {
+	sessionFactory = new Configuration().buildSessionFactory();
+}
+}

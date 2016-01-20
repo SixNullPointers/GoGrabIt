@@ -1,0 +1,32 @@
+package com.psl.client;
+
+import com.psl.bean.Category;
+import com.psl.bean.Customer;
+import com.psl.bean.CustomerStatus;
+import com.psl.dao.CategoryDaoImpl;
+import com.psl.dao.CustomerDaoImpl;
+
+public class Client {
+
+public static void main(String[] args) {
+	Category cat = new Category();
+	//cat.setCategoryId(1);
+	cat.setCategoryName("Electronics");
+
+	CategoryDaoImpl dao = new CategoryDaoImpl();
+	dao.insertCategory(cat);
+	System.out.println("Record inserted");
+	
+	Customer cust = new Customer();
+	//cust.setCustomerId(1);
+	cust.setFirstName("Om");
+	cust.setLastName("Narayan");
+	cust.setContactNo("9898776777");
+	cust.setEmail("om.narayan@gmail.com");
+	cust.setStatus(CustomerStatus.ACTIVE);
+	
+	CustomerDaoImpl daocust = new CustomerDaoImpl();
+	daocust.insertCustomer(cust);
+	System.out.println("customer inserted");
+}
+}

@@ -1,0 +1,27 @@
+package com.psl.dao;
+
+import com.psl.bean.Review;
+
+public class ReviewDaoImpl implements ReviewDao{
+
+	public void insertReview(Review review) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Review getReview(int reviewId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void updateReview(Review review) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void deleteReview(Review review) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

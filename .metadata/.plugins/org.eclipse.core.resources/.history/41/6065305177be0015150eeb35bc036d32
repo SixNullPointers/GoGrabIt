@@ -1,0 +1,19 @@
+package com.psl.utility;
+
+	import org.hibernate.SessionFactory;
+	import org.hibernate.cfg.Configuration;
+
+	public class HibernateUtil {
+
+		static SessionFactory sf=null;
+		
+		public static SessionFactory getSessionFactory(){
+			if(sf==null){
+				Configuration cfg = new Configuration();
+				cfg.configure();
+				sf = cfg.buildSessionFactory();
+			}
+			return sf;
+		}
+		
+	}

@@ -1,0 +1,63 @@
+package com.psl.dao;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import com.psl.beans.Employee;
+import com.psl.utility.HibernateUtility;
+
+public class EmployeeDaoImpl implements CategoryDao{
+
+	@Override
+	public void insertEmployee(Employee... emp) {
+		// TODO Auto-generated method stub
+		
+		SessionFactory sf = HibernateUtility.getSessionfactory();
+		
+		Session session =sf.openSession(); //session factory will give sessions
+		
+		session.beginTransaction();//once you have session you save it..therefore for any dml operaion in hib you need to create a transaction
+		
+		for(Employee e :emp){
+		session.save(emp);//save what? in ()
+		
+		}
+		session.getTransaction().commit();
+	}
+
+	@Override
+	public Employee getEmployee(int empId) {
+		// TODO Auto-generated method stub
+		SessionFactory sf = HibernateUtility.getSessionfactory();
+
+		Session session =sf.openSession(); //session factory will give sessions
+		Employee e = (Employee)session.get(Employee.class,empId);
+		
+		return e;
+	}
+
+	@Override
+	public void updateEmployee(Employee emp) {
+		// TODO Auto-generated method stub
+		SessionFactory sf = HibernateUtility.getSessionfactory();
+		
+		Session session =sf.openSession(); //session factory will give sessions
+		emp.setSalary(5000.0);
+		session.beginTransaction();//once you have session you save it..therefore for any dml operaion in hib you need to create a transaction
+		session.update(emp);//save what? in ()
+		session.getTransaction().commit();
+	}
+
+	@Override
+	public void deleteEmployee(Employee emp) {
+		// TODO Auto-generated method stub
+		SessionFactory sf = HibernateUtility.getSessionfactory();
+		
+		Session session =sf.openSession(); //session factory will give sessions
+		
+		session.beginTransaction();//once you have session you save it..therefore for any dml operaion in hib you need to create a transaction
+		session.delete(emp);//save what? in ()
+		session.getTransaction().commit();
+	}
+
+}

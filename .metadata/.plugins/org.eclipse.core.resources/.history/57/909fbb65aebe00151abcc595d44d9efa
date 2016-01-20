@@ -1,0 +1,12 @@
+package com.psl.dao;
+
+import com.psl.bean.QueryReplyDetails;
+
+public interface QueryReplyDao {
+
+	void insertQueryReply(QueryReplyDetails reply);
+	QueryReplyDetails getQueryReply(int replyId);
+	void updateCustomer(QueryReplyDetails reply);
+	void deleteCustomer(QueryReplyDetails reply);
+	
+}

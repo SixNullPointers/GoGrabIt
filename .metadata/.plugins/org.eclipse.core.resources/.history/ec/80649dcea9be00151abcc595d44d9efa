@@ -1,0 +1,27 @@
+package com.psl.dao;
+
+import com.psl.bean.Query;
+
+public class QueryDaoImpl implements QueryDao {
+
+	public void insertQuery(Query query) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public Query getQuery(int queryId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void updateQuery(Query query) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void deleteQuery(Query query) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

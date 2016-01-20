@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.hibernate.SessionFactory"/>
+<fullyQualifiedTypeName name="com.psl.utility.HibernateUtility"/>
+<fullyQualifiedTypeName name="com.psl.bean.CustomerStatus"/>
+<fullyQualifiedTypeName name="com.psl.dao.CustomerDaoImpl"/>
+<fullyQualifiedTypeName name="com.psl.dao.LoginDaoImpl"/>
+<fullyQualifiedTypeName name="com.psl.bean.Product"/>
+<fullyQualifiedTypeName name="com.psl.dao.ProductDaoImpl"/>
+<fullyQualifiedTypeName name="javax.persistence.OneToOne"/>
+<fullyQualifiedTypeName name="org.hibernate.annotations.Cascade"/>
+<fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
+<fullyQualifiedTypeName name="com.psl.dao.QueryReplyDao"/>
+<fullyQualifiedTypeName name="com.psl.bean.Query"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="com.psl.dao.QueryDaoImpl"/>
+<fullyQualifiedTypeName name="com.psl.dao.QueryReplyDaoImpl"/>
+<fullyQualifiedTypeName name="com.psl.bean.QueryReplyDetails"/>
+<fullyQualifiedTypeName name="com.psl.bean.RequestDetails"/>
+<fullyQualifiedTypeName name="javax.persistence.EnumType"/>
+<fullyQualifiedTypeName name="com.psl.bean.RequestStatus"/>
+<fullyQualifiedTypeName name="com.psl.dao.RequestDaoImpl"/>
+<fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
+<fullyQualifiedTypeName name="com.psl.dao.ReviewDao"/>
+<fullyQualifiedTypeName name="com.psl.bean.Review"/>
+<fullyQualifiedTypeName name="com.psl.dao.ReviewDaoImpl"/>
+<fullyQualifiedTypeName name="com.psl.bean.ReviewReplyDetails"/>
+<fullyQualifiedTypeName name="com.psl.dao.ReviewReplyDaoImpl"/>
+</qualifiedTypeNameHistroy>

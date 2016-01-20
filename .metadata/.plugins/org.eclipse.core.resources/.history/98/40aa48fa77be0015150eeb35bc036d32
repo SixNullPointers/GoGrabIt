@@ -1,0 +1,23 @@
+package com.psl.dao;
+
+import com.psl.beans.Employee;
+
+public interface CategoryDao {
+
+	
+	//create
+	
+	void insertEmployee(Employee... emp);
+	
+	
+	//Read
+	
+	Employee getEmployee(int empId);
+	
+	//Update
+	void updateEmployee(Employee emp);
+	
+	//Delete
+	void deleteEmployee(Employee emp);
+	
+}
